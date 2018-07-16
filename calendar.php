@@ -36,9 +36,6 @@ class Calendar
 
 	public function render()
 	{
-		$calendar = $this->getCalendar($this->year);
-		// return print_r($calendar[8]);
-
 		$output = str_pad($this->year, 64, " ", STR_PAD_BOTH) . "\n\n";
 
 		for ($monthRow = 0; $monthRow < 4; $monthRow++) {
@@ -64,7 +61,7 @@ class Calendar
 
 				for ($currentMonth = $firstMonthInRow; $currentMonth < $firstMonthInRow + 3; $currentMonth++) {
 
-					if (empty($calendar[$currentMonth][$weekNumber])) {
+					if (empty($this->calendar[$currentMonth][$weekNumber])) {
 						$rowSegments[] = str_repeat(" ", 20);
 						continue;
 					}
@@ -72,8 +69,8 @@ class Calendar
 					$columns = [];
 
 					for ($column = 0; $column < 7; $column++) {
-						$columns[] = isset($calendar[$currentMonth][$weekNumber][$column]) ? 
-							str_pad($calendar[$currentMonth][$weekNumber][$column], 2, " ", STR_PAD_LEFT) : "  ";	
+						$columns[] = isset($this->calendar[$currentMonth][$weekNumber][$column]) ? 
+							str_pad($this->calendar[$currentMonth][$weekNumber][$column], 2, " ", STR_PAD_LEFT) : "  ";	
 					}
 
 					$rowSegments[] = implode(" ", $columns);
