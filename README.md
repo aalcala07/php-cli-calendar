@@ -1,4 +1,4 @@
-# PHP Calendar CLI Tool
+# PHP CLI Calendar Tool
 
 Renders a calendar from the command line.
 
@@ -6,12 +6,12 @@ Renders a calendar from the command line.
 
 Display calendar of current year:
 ```
-php php-calendar.php
+php php-cli-calendar.php
 ```
 
 Display calendar of specific year:
 ```
-php php-calendar.php 2039
+php php-cli-calendar.php 2039
 ```
 
 ![2018 calendar rendered in termina](https://aalcala.com/public/images/projects/php-calendar-screenshot.png)
