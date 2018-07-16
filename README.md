@@ -13,3 +13,8 @@ Display calendar of specific year:
 ```
 php php-calendar.php 2039
 ```
+
+![2018 calendar rendered in termina](https://aalcala.com/public/images/projects/php-calendar-screenshot.png)
+
+
+
